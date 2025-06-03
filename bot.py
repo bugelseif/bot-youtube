@@ -30,6 +30,13 @@ def main():
     # Caminho para o webdriver
     bot.driver_path = GeckoDriverManager().install()
 
+    maestro.alert(
+        task_id=execution.task_id,
+        title="Info Alert",
+        message="This is an info alert",
+        alert_type=AlertType.INFO
+    )
+
     # Lista de canais para pesquisar
     canais = ['botcity_br', 'botcity-dev', 'youtube', 'github']
 
